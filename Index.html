@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" contents="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mediaqueries.css"/>
+    
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo"> Alex Davis</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo"> Alex Davis</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="togglemenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="togglemenu()">About</a></li>
+                <li><a href="#experience" onclick="togglemenu()">Experience</a></li>
+                <li><a href="#projects" onclick="togglemenu()">Projects</a></li>
+                <li><a href="#contact" onclick="togglemenu()">Contact</a></li>  
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./Assets/Alex Pro Pic.jpg" alt="Alex Davis Profile picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello I'm</p>
+            <h1 class="title">Alex Davis</h1>
+            <p class="section__text__p2">Frontend Developer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" 
+                onclick="window.open('./Assets/Alex Davis - CV.pdf')"> Download CV
+                </button>
+                <button class="btn btn-color-1" 
+                onclick="location.href='./#contact'"> Contact Info
+                </button>
+            </div>
+            <div id="socials-container">
+                <img src="./Assets/linkedin.png" alt="My linkedIn Profile" class="icon" 
+                onclick="location.href = 'https://www.linkedin.com/in/alex-davis-4095890'">
+
+                <img src="./Assets/github.png" alt="My Github Profile" class="icon" 
+                onclick="location.href = 'https://github.com/AlexDavis100'">
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Get to know me</p>
+        <h1 class="title">About me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./Assets/Alex Pro Pic.jpg" alt="Profile Picture" class="about-pic">
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./Assets/experience.png" alt="experience" class="icon">
+                        <h3>Experience</h3>
+                        <p>4+ Years <br>Frontend Web development</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./Assets/education.png" alt="education icon" class="icon">
+                        <h3>Education</h3>
+                        <p>B.Sc. Degree in Business Administration 
+                        <br>Management Information Systems Major
+                        </p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>
+                        I take pride in continuous self-development, 
+                        enhancing my mental capacity to assimilate new information. 
+                        A results-driven professional with over 4 years of experience in the
+                        insurance industry, I excel in driving revenue growth, 
+                        establishing strategic partnerships, and surpassing sales targets. 
+                        Proficient in utilizing market insights, I implement effective sales strategies to 
+                        seize new business opportunities. Demonstrating success in branch management 
+                        and quality analysis, I optimize operational efficiency and provide 
+                        exceptional customer service. My strong leadership skills, coupled with a 
+                        customer-centric approach, prioritize client satisfaction and loyalty. 
+                        I am committed to achieving organizational goals through innovation, 
+                        collaboration, and ongoing professional development.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img src="./Assets/arrow.png" alt="Arrow icon" class="icon arrow" 
+        onclick="location.href= './#experience'">
+    </section>
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experienc-sub-title">Frontend Development</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
+                            <div>
+                                <h3>HTML</h3>
+                                <P>Experienced</P>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
+                            <div>
+                                <h3>CSS</h3>
+                                <P>Experienced</P>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
+                            <div>
+                                <h3>SAAS</h3>
+                                <P>Intermediate</P>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
+                            <div>
+                                <h3>JavaScipt</h3>
+                                <P>Basic</P>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
+                            <div>
+                                <h3>CANVA</h3>
+                                <P>Experienced</P>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
+                            <div>
+                                <h3>EXCEL</h3>
+                                <P>Experienced</P>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experienc-sub-title">Backend Development</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
+                            <div>
+                                <h3>Node.js</h3>
+                                <P>Bigginer</P>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
+                            <div>
+                                <h3>AI</h3>
+                                <P>Bigginer</P>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
+                            <div>
+                                <h3>Git</h3>
+                                <P>Intermediate</P>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
+                            <div>
+                                <h3>Mysql</h3>
+                                <P>Basic</P>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./Assets/arrow.png" alt="Arrow icon" class="icon arrow" 
+        onclick="location.href= './#projects'">
+    </section>
+    <section id="projects">
+        <P class="section__text__p1">Browse My Recent</P>
+        <h3 class="title">Projects</h3>
+        <div class="experience-details-container">
+            <div class="about-containers">
+            <div class="details-container color-container">
+                <div></div>
+                <div class="article-container">
+                    <img src="./Assets/project-1.png" alt="Project 1" class="project-img">
+                    <h2 class="expereince-sub-title project-title">Project One</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/AlexDavis100'">Github</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/AlexDavis100'">Live Demo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./Assets/project-2.png" alt="Project 2" class="project-img">
+                    <h2 class="expereince-sub-title project-title">Project Two</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/AlexDavis100'">Github</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/AlexDavis100'">Live Demo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./Assets/project-3.png" alt="Project 3" class="project-img">
+                    <h2 class="expereince-sub-title project-title">Project Three</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/AlexDavis100'">Github</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/AlexDavis100'">Live Demo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <img src="./Assets/arrow.png" alt="Arrow icon" class="icon arrow" 
+        onclick="location.href= './#contact'">
+    </section>
+    <section id="contact">
+        <p class="section__text__p1"> Get In Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./Assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
+                <p class=""><a href="mailto:exampleemail1@gmail.com">Example@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./Assets/linkedin.png" alt="linkedIn icon" class="icon contact-icon">
+                <p class=""><a href="https://www.linkedin.com/in/alex-davis-4095890">LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copy Right &#169; 2023 Alex Davis. All Rights Reserved</p>
+    </footer>
+<script src="script.js"></script>    
+</body>
+</html>
