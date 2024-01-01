@@ -7,7 +7,7 @@
 
 body {
     font-family: "poppins", sans-serif;
-    background-color: rgb(163, 163, 163);
+    background-color: rgb(2, 27, 26);
 }
 
 html {
@@ -15,7 +15,7 @@ html {
 }
 
 p {
-    color: rgb(85, 85, 85) ;
+    color: rgb(220, 218, 218) ;
 }
  /* TRANSITION*/
 
@@ -41,7 +41,7 @@ nav {
     font-size: 1.5rem;
 }
 a {
-    color: black;
+    color: rgb(0, 255, 187);
     text-decoration: none;
     text-decoration-color: white;
 }
@@ -74,10 +74,10 @@ a:hover {
   }
 
   .animated-word {
-    font-size: 24px;
+    font-size: 8rem;
     font-weight: bold;
-    color: #333;
-    animation: wordAnimation 2s ease-in-out infinite;
+    color: rgb(1, 140, 103);;
+    animation: wordAnimation 3s ease-in-out infinite;
   }
 
 .logo:hover {
@@ -209,7 +209,7 @@ section {
     width: auto;
     background: url('./Assets/Alex\ Pro\ Pic\ 2.jpg') center/cover;
     animation: slideIn 2s ease-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 218, 152, 0.97);
     animation: spin 20s linear infinite;
 }
 
@@ -219,7 +219,7 @@ section {
     width: auto;
     background: url('./Assets/Alex\ Pro\ Pic\ 2.jpg') center/cover;
     animation: slideIn 2s ease-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 218, 152, 0.97);
 }
 
 .section__text {
@@ -242,6 +242,7 @@ section {
 .title {
     font-size: 3rem;
     text-align: center;
+    color:rgb(0, 255, 187);
 }
 
 #socials-container {
@@ -257,6 +258,9 @@ section {
     cursor: pointer;
     height: 2rem;
 }
+.icon-text-color {
+    color: black;
+}
 
 /*ButtONS*/
 
@@ -271,10 +275,11 @@ section {
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 218, 152, 0.97);
 }
 .btn-color-1,
 .btn-color-2 {
-    border: rgb(53,53,53) 0.1rem solid;
+    border: rgb(1, 173, 29) 0.1rem solid;
 }
 .btn-color-1:hover,
 .btn-color-2:hover {
@@ -282,7 +287,7 @@ section {
 }
 .btn-color-1,
 .btn-color-2:hover {
-    background: rgb(53,53,53);
+    background: rgb(10, 72, 0);
     color: #fff;
 }
 .btn-color-1:hover {
@@ -290,7 +295,7 @@ section {
     border:rgb(231, 14, 14) 0.1rem solid; ;
 }
 .btn-color-2 {
-    background: none;
+    background: rgb(218, 218, 218);
 }
 .btn-color-2:hover {
     border: rgb(231, 14, 14) 0.1rem solid;
@@ -324,7 +329,11 @@ section {
     position: absolute;
     right: -5rem;
     bottom: 2.5rem;
+    background-color: rgba(0, 218, 153, 0.382);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 4px rgb(0, 255, 187);
 }
+
 .details-container {
     padding: 1.5rem;
     flex: 1;
@@ -334,7 +343,7 @@ section {
     border-color:rgb(163,163,163) ;
     text-align: center;
     opacity: 85%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 218, 152, 0.97);
 }
 
 @keyframes shake {
@@ -433,7 +442,7 @@ article .icon {
     background: rgb(250,250,250);
     margin: 2rem auto;
     padding: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 2px rgb(0, 255, 187);
 }
 .contact-info-container {
     display: flex;
