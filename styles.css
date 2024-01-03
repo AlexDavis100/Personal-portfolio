@@ -76,7 +76,7 @@ a:hover {
   .animated-word {
     font-size: 8rem;
     font-weight: bold;
-    color: rgb(1, 140, 103);;
+    color: rgb(1, 140, 103);
     animation: wordAnimation 3s ease-in-out infinite;
   }
 
@@ -175,10 +175,10 @@ section {
 
 .section__pic-container {
     display: flex;
-    height: 400px;
-    width: 400px;
+    height: 700px;
+    width: 700px;
     margin: auto 0;
-    padding: 20px;
+    padding: 50px;
 }
 @keyframes slideIn {
     from {
@@ -219,7 +219,7 @@ section {
     width: auto;
     background: url('./Assets/Alex\ Pro\ Pic\ 2.jpg') center/cover;
     animation: slideIn 2s ease-out;
-    box-shadow: 0 4px 8px rgba(0, 218, 152, 0.97);
+    box-shadow: 0 4px 9px rgba(0, 218, 152, 0.97);
 }
 
 .section__text {
@@ -260,6 +260,14 @@ section {
 }
 .icon-text-color {
     color: black;
+}
+
+.linkedIn {
+    border-radius: 2rem;
+}
+.Github {
+    background: #fff;
+    border-radius: 2rem;
 }
 
 /*ButtONS*/

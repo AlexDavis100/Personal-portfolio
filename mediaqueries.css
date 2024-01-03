@@ -5,6 +5,10 @@
     .about-containers {
         flex-wrap: wrap;
     }
+    .logo {
+        font-size: 5rem;
+        color: rgb(1, 140, 103);
+     }
 }
 
 
@@ -39,6 +43,10 @@
     .about-containers {
         margin-top: 0;
     }
+    .logo {
+        font-size: 2.5rem;
+        color: rgb(1, 140, 103);
+     }
     
 }
 
@@ -73,6 +81,7 @@
      }
      .logo {
         font-size: 1.5rem;
+        color: rgb(1, 140, 103);
      }
      .nav-links {
         flex-direction: column;
