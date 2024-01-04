@@ -198,9 +198,21 @@ section {
     }
   }
 
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 5px rgba(0, 218, 152, 0.97);;
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(0, 218, 152, 0.97);;
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(0, 218, 152, 0.97);;
+    }
+  }
+
+
   .spin-image {
     background: url('./Assets/Alex\ Pro\ Pic\ 2.jpg') center/cover;
-    animation: spin 5s linear infinite;
   }
 
 .section__pic-container .spin-image {
@@ -210,7 +222,7 @@ section {
     background: url('./Assets/Alex\ Pro\ Pic\ 2.jpg') center/cover;
     animation: slideIn 2s ease-out;
     box-shadow: 0 4px 8px rgba(0, 218, 152, 0.97);
-    animation: spin 20s linear infinite;
+    animation: spin 60s linear infinite;
 }
 
 .section__pic-container .profile-image {
@@ -220,6 +232,7 @@ section {
     background: url('./Assets/Alex\ Pro\ Pic\ 2.jpg') center/cover;
     animation: slideIn 2s ease-out;
     box-shadow: 0 4px 9px rgba(0, 218, 152, 0.97);
+    animation: glow 2s infinite;
 }
 
 .section__text {
@@ -284,6 +297,7 @@ section {
     width: 8rem;
     border-radius: 2rem;
     box-shadow: 0 4px 8px rgba(0, 218, 152, 0.97);
+    
 }
 .btn-color-1,
 .btn-color-2 {
@@ -424,6 +438,14 @@ article .icon {
     height: 90%;
     animation: slideIn 3s ease-out;
 }
+
+.project-img1 {
+    border-radius:2rem;
+    width: 90%;
+    height: 300px;
+    animation: slideIn 3s ease-out;
+}
+
 .project-title {
     margin: 1rem;
     color:black;
@@ -451,6 +473,7 @@ article .icon {
     margin: 2rem auto;
     padding: 0.5rem;
     box-shadow: 0 2px 2px rgb(0, 255, 187);
+    animation: glow 2s infinite;
 }
 .contact-info-container {
     display: flex;
