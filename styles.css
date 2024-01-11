@@ -173,6 +173,10 @@ section {
     justify-content: center;
 }
 
+li {
+    list-style: none;
+}
+
 .section__pic-container {
     display: flex;
     height: 700px;
@@ -401,7 +405,7 @@ section {
 }
 .experience-details-container {
     display: flex;
-    justify-content: center;
+    justify-content:center;
     flex-direction: column;
 }
 .article-container {
