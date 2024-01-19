@@ -47,14 +47,6 @@
     #profile, .section-container {
         display: block;
     }
-
-    .section__pic-container {
-      display: flex;
-      margin: auto 0;
-      padding: 15px;
-      position: relative;
-      left: 5px;
-  }
     .arrow {
         display: none;
     }
@@ -108,13 +100,6 @@
         height: 83vh;
         margin-bottom: 0;
     }
-    .section__pic-container {
-      display: flex;
-      margin: auto 0;
-      padding: 15px;
-      position: relative;
-      left: 18px;
-  }
     article {
         font-size: 1rem;
     }

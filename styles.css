@@ -194,8 +194,6 @@ li {
     width: 700px;
     margin: auto 0;
     padding: 15px;
-    position: relative;
-    right: 100px;
 }
 
 @keyframes slideIn {
