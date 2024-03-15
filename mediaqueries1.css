@@ -6,7 +6,7 @@
         flex-wrap: wrap;
     }
     .logo {
-        font-size: 5rem;
+        font-size: 100rem;
         color: rgb(1, 140, 103);
      }
      @keyframes wordAnimation {
