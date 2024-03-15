@@ -66,8 +66,8 @@ nav {
   
   .menu-links {
     position: absolute;
-    top: 100%;
-    right: 0;
+    top: 25px;
+    right: -10px;
     background-color: rgb(19, 112, 7);
     opacity: 70%;
     width: fit-content;
