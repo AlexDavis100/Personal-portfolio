@@ -185,6 +185,24 @@ section {
     display: flex;
 }
 
+.mySlides {
+    display:none;
+}
+
+.fade {
+    animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 /*PROFILE SECTION*/
 
 .company-logo {
