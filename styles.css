@@ -217,7 +217,7 @@ a:hover {
     cursor: pointer;
     padding: 16px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 58, 28, 0.908);
     border: none;
     border-radius: 50%;
     z-index: 1;
@@ -561,7 +561,8 @@ article .icon {
 }
 .project-btn {
     color:black;
-    border-color:rgb(163, 163, 163) ;
+    border-color:rgb(3, 167, 28) ;
+    background-color: rgb(2, 255, 255);
 }
 
 /* CONTACT*/
