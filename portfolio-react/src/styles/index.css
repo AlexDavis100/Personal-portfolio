@@ -1,0 +1,246 @@
+:root {
+  --bg-color: #0a0e17;
+  --bg-secondary: #121a29;
+  --text-color: #e0e6f0;
+  --text-secondary: #8a94a8;
+  --border-color: #1c2536;
+  --accent-color: #0df;
+  --accent-color-dark: #0af;
+  --accent-color-secondary: #f03278;
+  --glow-color: rgba(0, 221, 255, 0.7);
+  --hologram-color-1: rgba(0, 221, 255, 0.2);
+  --hologram-color-2: rgba(0, 170, 255, 0.15);
+  --glass-bg: rgba(18, 26, 41, 0.7);
+  --glass-border: rgba(0, 221, 255, 0.3);
+  --gradient-primary: linear-gradient(135deg, #0df, #0af);
+  --gradient-hologram: linear-gradient(135deg, #0df, #f03278);
+  --shadow-neon: 0 0 15px rgba(0, 221, 255, 0.5);
+  --font-tech: 'Space Grotesk', 'Rajdhani', sans-serif;
+}
+
+[data-theme="light"] {
+  --bg-color: #eef1f5;
+  --bg-secondary: #dbe1e8;
+  --text-color: #0a0e17;
+  --text-secondary: #455166;
+  --border-color: #c0cad8;
+  --accent-color: #0095ff;
+  --accent-color-dark: #0077cc;
+  --accent-color-secondary: #e91e63;
+  --glow-color: rgba(0, 149, 255, 0.4);
+  --hologram-color-1: rgba(0, 149, 255, 0.15);
+  --hologram-color-2: rgba(0, 119, 204, 0.1);
+  --glass-bg: rgba(219, 225, 232, 0.7);
+  --glass-border: rgba(0, 149, 255, 0.2);
+  --gradient-primary: linear-gradient(135deg, #0095ff, #0077cc);
+  --gradient-hologram: linear-gradient(135deg, #0095ff, #e91e63);
+  --shadow-neon: 0 0 15px rgba(0, 149, 255, 0.3);
+}
+
+/* Add tech fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-tech), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Add a subtle background pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(to bottom, rgba(0, 221, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to right, rgba(0, 221, 255, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+[data-theme="light"] body::before {
+  background-image: 
+    linear-gradient(to bottom, rgba(0, 149, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to right, rgba(0, 149, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Futuristic scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color-dark);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container to center content */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section styling */
+.section {
+  padding: 80px 0;
+  position: relative;
+}
+
+/* Futuristic section title */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  font-family: var(--font-tech);
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text-color);
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  filter: blur(2px);
+  opacity: 0.8;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+    width: 30px;
+  }
+  50% {
+    opacity: 1;
+    width: 60px;
+  }
+}
+
+/* Glowing text effect */
+.glow-text {
+  text-shadow: 0 0 5px var(--glow-color);
+}
+
+/* Glass morphism effect */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Holographic element with animation */
+.holographic {
+  position: relative;
+  overflow: hidden;
+}
+
+.holographic::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--hologram-color-1) 0%, transparent 50%);
+  opacity: 0.5;
+  animation: hologram 15s linear infinite;
+}
+
+.holographic::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, var(--hologram-color-2), transparent);
+  opacity: 0.3;
+  animation: hologram 10s linear infinite reverse;
+}
+
+@keyframes hologram {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+} 

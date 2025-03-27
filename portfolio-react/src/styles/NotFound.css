@@ -1,0 +1,279 @@
+.not-found-section {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.not-found-content {
+  text-align: center;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.not-found-content h1 {
+  font-size: 8rem;
+  margin: 0;
+  line-height: 1;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: textGlow 3s ease-in-out infinite alternate;
+}
+
+.not-found-content h2 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.not-found-content h2::after {
+  content: none;
+}
+
+.not-found-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+}
+
+.actions {
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--bg-dark);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-color);
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+/* Animation elements */
+.not-found-animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(2px 2px at 20px 30px, #fff, rgba(0, 0, 0, 0)),
+                    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
+                    radial-gradient(2px 2px at 60px 110px, #fff, rgba(0, 0, 0, 0)),
+                    radial-gradient(2px 2px at 80px 150px, #fff, rgba(0, 0, 0, 0)),
+                    radial-gradient(2px 2px at 100px 190px, #fff, rgba(0, 0, 0, 0)),
+                    radial-gradient(2px 2px at 120px 230px, #fff, rgba(0, 0, 0, 0)),
+                    radial-gradient(2px 2px at 140px 270px, #fff, rgba(0, 0, 0, 0));
+  background-size: 200px 200px;
+  animation: movingStars 100s linear infinite;
+  opacity: 0.3;
+}
+
+.planet {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  bottom: 10%;
+  right: 10%;
+  background: linear-gradient(45deg, #3a2161, #5d1da1);
+  border-radius: 50%;
+  box-shadow: 0 0 20px 2px rgba(93, 29, 161, 0.3);
+  animation: planetPulse 8s ease-in-out infinite alternate;
+}
+
+.planet::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  filter: blur(5px);
+}
+
+.astronaut {
+  position: absolute;
+  width: 60px;
+  height: 90px;
+  top: 50%;
+  left: 60%;
+  animation: float 10s ease-in-out infinite;
+}
+
+.astronaut-body {
+  position: absolute;
+  width: 40px;
+  height: 50px;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  top: 25px;
+  left: 10px;
+}
+
+.astronaut-head {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  top: 5px;
+  left: 15px;
+  border: 4px solid #cccccc;
+}
+
+.astronaut-arm {
+  position: absolute;
+  width: 8px;
+  height: 25px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.astronaut-arm.left {
+  top: 30px;
+  left: 5px;
+  transform: rotate(-20deg);
+}
+
+.astronaut-arm.right {
+  top: 30px;
+  right: 5px;
+  transform: rotate(20deg);
+}
+
+.astronaut-leg {
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  top: 70px;
+}
+
+.astronaut-leg.left {
+  left: 15px;
+}
+
+.astronaut-leg.right {
+  right: 15px;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(3deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(-3deg);
+  }
+}
+
+@keyframes planetPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px 2px rgba(93, 29, 161, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px 5px rgba(93, 29, 161, 0.5);
+  }
+}
+
+@keyframes movingStars {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 200px 200px;
+  }
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(97, 218, 251, 0.8), 0 0 30px rgba(97, 218, 251, 0.5);
+  }
+}
+
+/* Light theme adjustments */
+.theme-light .stars {
+  opacity: 0.1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .not-found-section {
+    flex-direction: column;
+  }
+  
+  .not-found-content h1 {
+    font-size: 6rem;
+  }
+  
+  .not-found-content h2 {
+    font-size: 2rem;
+  }
+  
+  .planet {
+    width: 100px;
+    height: 100px;
+    bottom: 5%;
+    right: 5%;
+  }
+  
+  .astronaut {
+    left: 40%;
+    width: 40px;
+    height: 60px;
+  }
+  
+  .astronaut-body {
+    width: 30px;
+    height: 35px;
+    top: 15px;
+    left: 5px;
+  }
+  
+  .astronaut-head {
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 10px;
+    border-width: 3px;
+  }
+  
+  .astronaut-arm {
+    width: 6px;
+    height: 20px;
+  }
+  
+  .astronaut-leg {
+    width: 8px;
+    height: 20px;
+    top: 45px;
+  }
+} 

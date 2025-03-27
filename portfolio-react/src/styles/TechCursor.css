@@ -1,0 +1,184 @@
+/* Hide the default cursor */
+body {
+  cursor: none !important;
+}
+
+/* Main tech cursor */
+.tech-cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease-out, opacity 0.3s ease;
+  opacity: 0;
+  mix-blend-mode: screen;
+}
+
+.tech-cursor.visible {
+  opacity: 1;
+}
+
+/* Ring around cursor */
+.cursor-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid rgba(0, 204, 255, 0.8);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.5), 
+              inset 0 0 10px rgba(0, 204, 255, 0.5);
+}
+
+/* Inner cursor dot */
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: #00ffcc;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s;
+  opacity: 0;
+  box-shadow: 0 0 8px rgba(0, 255, 204, 0.8);
+}
+
+.cursor-dot.visible {
+  opacity: 1;
+}
+
+/* Cursor trail */
+.cursor-trail {
+  position: fixed;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 153, 255, 0.3);
+  mix-blend-mode: screen;
+  box-shadow: 0 0 5px rgba(0, 153, 255, 0.3);
+  transition: opacity 0.3s ease;
+}
+
+/* Click ripple effect */
+.click-ripple {
+  position: fixed;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 204, 255, 0.8) 0%,
+    rgba(0, 204, 255, 0) 70%
+  );
+  pointer-events: none;
+  z-index: 9997;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: width 0.5s ease-out, height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.click-ripple.active {
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+  animation: ripple-fade 0.7s forwards;
+}
+
+/* Particles that explode on click */
+.cursor-particle {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9996;
+  box-shadow: 0 0 10px currentColor;
+  opacity: 1;
+}
+
+/* Styles for hover state */
+.tech-cursor.cursor-hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tech-cursor.cursor-hover .cursor-ring {
+  border-color: rgba(255, 255, 255, 0.6);
+  animation: hover-pulse 1s infinite;
+}
+
+/* Styles for clicking state */
+.tech-cursor.clicking {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.tech-cursor.clicking .cursor-ring {
+  border-color: rgba(255, 0, 128, 0.8);
+  box-shadow: 0 0 15px rgba(255, 0, 128, 0.6), 
+              inset 0 0 15px rgba(255, 0, 128, 0.6);
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 204, 255, 0.5), 
+                inset 0 0 5px rgba(0, 204, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 204, 255, 0.7), 
+                inset 0 0 10px rgba(0, 204, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 204, 255, 0.5), 
+                inset 0 0 5px rgba(0, 204, 255, 0.5);
+  }
+}
+
+@keyframes hover-pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 
+                inset 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.7), 
+                inset 0 0 8px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 
+                inset 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@keyframes ripple-fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    cursor: auto !important; /* Restore default cursor on mobile/touch devices */
+  }
+  
+  .tech-cursor, 
+  .cursor-dot, 
+  .cursor-trail,
+  .click-ripple,
+  .cursor-particle {
+    display: none; /* Hide custom cursor on mobile/touch devices */
+  }
+} 

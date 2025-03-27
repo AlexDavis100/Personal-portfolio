@@ -1,0 +1,90 @@
+/* Hide the default cursor */
+html,
+body {
+  cursor: none;
+}
+
+/* Default cursor style */
+.cursor {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+  z-index: 9999;
+  opacity: 0.7;
+  mix-blend-mode: difference;
+}
+
+.cursor-dot {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+  z-index: 10000;
+  opacity: 1;
+}
+
+.cursor-hover {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(124, 77, 255, 0.1);
+  mix-blend-mode: normal;
+}
+
+.cursor-clicked {
+  width: 45px;
+  height: 45px;
+  border-color: rgba(124, 77, 255, 0.5);
+  opacity: 0.5;
+}
+
+.cursor-dot-hover {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.cursor-dot-clicked {
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent-color-dark);
+}
+
+.cursor-hidden, .cursor-dot-hidden {
+  opacity: 0;
+}
+
+/* Hide cursor when user has disabled animations in their OS settings */
+@media (prefers-reduced-motion: reduce) {
+  .cursor, .cursor-dot {
+    display: none;
+  }
+}
+
+/* Hide custom cursor on mobile and tablet devices */
+@media (max-width: 1024px) {
+  .cursor, .cursor-dot {
+    display: none;
+  }
+}
+
+/* Media query to disable custom cursor on small screens */
+@media (max-width: 768px) {
+  .cursor,
+  .cursor-follower {
+    display: none;
+  }
+  
+  html,
+  body {
+    cursor: auto;
+  }
+} 

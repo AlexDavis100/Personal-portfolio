@@ -2,25 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" contents="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Profile</title>
+    <title>Alex Davis | Tech Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mediaqueries1.css"/>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <div id="particles-js"></div>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
     <nav id="desktop-nav">
-        <div class="logo animated-word"> Alex Davis</div>
+        <div class="logo glitch-text" data-text="Alex Davis">Alex Davis</div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><button id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button></li>
             </ul>
     </nav>
+    
     <nav id="hamburger-nav">
-        <div class="logo"> Alex Davis</div>
+        <div class="logo glitch-text" data-text="Alex Davis">Alex Davis</div>
         <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="togglemenu()">
                 <span></span>
@@ -35,66 +45,106 @@
             </div>
         </div>
     </nav>
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./Assets/Alex Pro Pic.jpg" alt="Alex Davis Profile picture"  class="profile-image">
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello I'm</p>
-            <h1 class="title">Alex Davis</h1>
-            <a class="logo-link" href="https://upliftteck.co/" target="_blank"><img src="./Assets/UpLiftTeck - New Logo 2-modified.png" class="company-logo"></a>
-            <p class="section__text__p2">Founder & CEO - UpLiftTeck</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" 
-                onclick="window.open('./Assets/Alex Davis - CV 24.pdf')"> Download CV
-                </button>
-                <button class="btn btn-color-1" 
-                onclick="location.href='./#contact'"> Contact Info
-                </button>
-            </div>
-            <div id="socials-container">
-                <img src="./Assets/Linked in logo 1.png" alt="My linkedIn Profile" class="icon linkedIn" 
-                onclick="location.href = 'https://www.linkedin.com/in/alex-davis-4095890'">
 
-                <img src="./Assets/github.png" alt="My Github Profile" class="icon Github" 
-                onclick="location.href = 'https://github.com/AlexDavis100'">
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-right">
+                <div class="title-container">
+                    <h1 class="hero-title">
+                        <span class="text-animate">H</span>
+                        <span class="text-animate">e</span>
+                        <span class="text-animate">l</span>
+                        <span class="text-animate">l</span>
+                        <span class="text-animate">o</span>
+                        <span class="text-animate">,</span>
+                        <br/>
+                        <span class="text-animate">I</span>
+                        <span class="text-animate">'</span>
+                        <span class="text-animate">m</span>
+                        <span class="text-animate space">&nbsp;</span>
+                        <span class="text-animate name">A</span>
+                        <span class="text-animate name">l</span>
+                        <span class="text-animate name">e</span>
+                        <span class="text-animate name">x</span>
+                    </h1>
+                </div>
+                <div class="hero-subtitle">
+                    <p><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+                </div>
+                <div class="company-info">
+                    <a class="logo-link neo-brutalism-button" href="https://upliftteck.co/" target="_blank">
+                        <img src="./Assets/UpLiftTeck - New Logo 2-modified.png" class="company-logo">
+                        <span>Founder & CEO - UpLiftTeck</span>
+                    </a>
+        </div>
+            <div class="btn-container">
+                    <button class="btn btn-primary" onclick="window.open('./Assets/Alex Davis - CV 24.pdf')">
+                        <span class="btn-text">Download CV</span>
+                        <span class="btn-icon"><i class="fas fa-download"></i></span>
+                </button>
+                    <button class="btn btn-secondary" onclick="location.href='./#contact'">
+                        <span class="btn-text">Contact Info</span>
+                        <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                </button>
+                </div>
+                <div class="socials-container">
+                    <a href="https://www.linkedin.com/in/alex-davis-4095890" target="_blank" class="social-icon linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/AlexDavis100" target="_blank" class="social-icon github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
             </div>
+            <div class="hero-image" data-aos="fade-left">
+                <div class="profile-image-container">
+                    <img src="./Assets/Alex Pro Pic.jpg" alt="Alex Davis" class="profile-image">
+                    <div class="image-effects"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about">
+                <div class="mouse">
+                    <span></span>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                </div>
+            </a>
         </div>
     </section>
-    <section id="about">
-        <p class="section__text__p1">Get to know me</p>
-        <h1 class="title">About me</h1>
+
+    <section id="about" data-aos="fade-up">
+        <div class="section-header">
+            <span class="section-tag">&lt;about&gt;</span>
+            <h2 class="section-title">About Me</h2>
+            <div class="section-line"></div>
+        </div>
         <div class="section-container">
-            <div class="section__pic-container">
-                <img src="./Assets/Alex Pro Pic 2.jpg" alt="Profile Picture" class="about-pic spin-image">
+            <div class="about-image-container" data-aos="fade-right">
+                <div class="about-image-wrapper">
+                    <img src="./Assets/Alex Pro Pic 2.jpg" alt="Profile Picture" class="about-pic">
+                    <div class="about-image-backdrop"></div>
             </div>
-            <div class="about-details-container">
-                <div class="about-containers shake-element">
-                    <div class="details-container">
-                        <img src="./Assets/experience.png" alt="experience" class="icon">
-                        <h3>Experience</h3>
-                        <p style="color: rgb(72, 70, 70);"> 3+ Years in the BPO Sector <br> 4+ Years <br>In the insurance industry </p>  
-                        <!--<ul>
-                            <li>Quality Analyst</li>
-                            <li>Branch Manager</li>
-                            <li>Business Development Officer</li>
-                        </ul>-->
-                    </div>
-                    <div class="details-container">
-                        <img src="./Assets/education.png" alt="education icon" class="icon">
-                        <h3>Education</h3>
-                        <p style="color: rgb(72, 70, 70);"> B.Sc. Degree in Business Administration 
-                        <br>Management Information Systems Major
-                        </p>
-                    </div>
+                <div class="tech-stack">
+                    <div class="tech-item"><i class="fab fa-html5"></i></div>
+                    <div class="tech-item"><i class="fab fa-css3-alt"></i></div>
+                    <div class="tech-item"><i class="fab fa-js"></i></div>
+                    <div class="tech-item"><i class="fab fa-python"></i></div>
+                    <div class="tech-item"><i class="fab fa-react"></i></div>
                 </div>
-                <div class="text-container">
+            </div>
+            <div class="about-content" data-aos="fade-left">
+                <div class="about-text">
                     <p>
                         I am deeply passionate about continuous self-development,
                          eagerly expanding my mental capacity to embrace emerging technological advancements. 
                          With over 4 years of experience in the insurance industry, 
                          I am a results-driven professional dedicated to propelling revenue growth, 
                          forging strategic partnerships, and consistently exceeding sales targets. 
+                    </p>
+                    <p>
                          Leveraging market insights, I adeptly implement cutting-edge sales strategies 
                          to capitalize on new business opportunities. My track record includes successful branch management 
                          and meticulous quality analysis, optimizing operational efficiency while delivering exceptional customer service. 
@@ -103,218 +153,395 @@
                          and continual professional development.
                     </p>
                 </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">4+</div>
+                        <div class="stat-label">Years in Insurance</div>
+                        <div class="stat-bar"><span style="width: 80%"></span></div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years in BPO</div>
+                        <div class="stat-bar"><span style="width: 60%"></span></div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Projects Completed</div>
+                        <div class="stat-bar"><span style="width: 100%"></span></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <img src="./Assets/arrow.png" alt="Arrow icon" class="icon arrow" 
-        onclick="location.href= './#experience'">
+        <span class="section-tag-end">&lt;/about&gt;</span>
     </section>
-    <section id="experience">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Frontend Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
-                            <div>
+
+    <section id="experience" data-aos="fade-up">
+        <div class="section-header">
+            <span class="section-tag">&lt;experience&gt;</span>
+            <h2 class="section-title">My Experience</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="experience-container">
+            <div class="experience-tabs">
+                <button class="tab-button active" data-tab="skills">Technical Skills</button>
+                <button class="tab-button" data-tab="work">Work Experience</button>
+                <button class="tab-button" data-tab="education">Education</button>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="skills">
+                    <div class="skills-container">
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="skill-icon"><i class="fab fa-html5"></i></div>
                                 <h3>HTML</h3>
-                                <P>Experienced</P>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 90%"></div>
                             </div>
-                        </article>
-                        <article>
-                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
-                            <div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
                                 <h3>CSS</h3>
-                                <P>Experienced</P>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 85%"></div>
                             </div>
-                        </article>
-                        <article>
-                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
-                            <div>
-                                <h3>JavaScipt</h3>
-                                <P>Basic</P>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="skill-icon"><i class="fab fa-js"></i></div>
+                            <h3>JavaScript</h3>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 60%"></div>
                             </div>
-                        </article>
-                        <article>
-                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
-                            <div>
-                                <h3>CANVA</h3>
-                                <P>Experienced</P>
+                            <span class="skill-percentage">60%</span>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <h3>Python</h3>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 50%"></div>
                             </div>
-                        </article>
-                        <article>
-                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
-                            <div>
-                                <h3>Python</h3>
-                                <P>Basic</P>
+                            <span class="skill-percentage">50%</span>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <h3>MySQL</h3>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 55%"></div>
                             </div>
-                        </article>
-                        <article>
-                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
-                            <div>
-                                <h3>MySql</h3>
-                                <P>Basic</P>
+                            <span class="skill-percentage">55%</span>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="skill-icon"><i class="fas fa-palette"></i></div>
+                            <h3>CANVA</h3>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 95%"></div>
                             </div>
-                        </article>
+                            <span class="skill-percentage">95%</span>
+                        </div>
                     </div>
                 </div>
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Work Experience</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
-                            <div>
+                <div class="tab-pane" id="work">
+                    <div class="timeline">
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Branch Manager</h3>
+                                <p class="timeline-date">2020 - Present</p>
+                                <p>Managed branch operations, optimized workflows, and exceeded sales targets consistently.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
                                 <h3>Quality Analyst</h3>
-                                <P>Expereinced</P>
+                                <p class="timeline-date">2018 - 2020</p>
+                                <p>Ensured quality standards in the BPO sector, improving operational efficiency by 35%.</p>
                             </div>
-                        </article>
-                        <article>
-                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
-                            <div>
-                                <h3>Branch Management</h3>
-                                <P>Expereinced</P>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Business Development Officer</h3>
+                                <p class="timeline-date">2016 - 2018</p>
+                                <p>Developed business strategies and forged strategic partnerships to drive growth.</p>
                             </div>
-                        </article>
-                        <article>
-                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
-                            <div>
-                                <h3>Team Management</h3>
-                                <P>Experienced</P>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
-                            <div>
-                                <h3>Business Development</h3>
-                                <P>Expereinced</P>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./Assets/checkmark.png" alt="Expereince icon" class="icon">
-                            <div>
-                                <h3>Business Development Sales Specialist</h3>
-                                <P>Expereinced</P>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img src="./Assets/arrow.png" alt="Arrow icon" class="icon arrow" 
-        onclick="location.href= './#projects'">
-    </section>
-    <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h3 class="title">Projects</h3>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <!-- Project 1 -->
-                <div class="details-container color-container">
-                    <div></div>
-                    <div class="article-container">
-                        <img src="./Assets/Professional website Project.png" alt="Project 1" class="project-img1">
-                        <h2 class="experience-sub-title project-title">Professional Website</h2>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/AlexDavis100'">Github</button>
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://alexdavis-professionalprofile.netlify.app'">Live Demo</button>
                         </div>
                     </div>
+                            </div>
+                <div class="tab-pane" id="education">
+                    <div class="education-card" data-aos="flip-left">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        <div class="education-content">
+                            <h3>B.Sc. in Business Administration</h3>
+                            <p class="education-major">Management Information Systems Major</p>
+                            <p class="education-date">2012 - 2016</p>
+                            </div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <span class="section-tag-end">&lt;/experience&gt;</span>
+    </section>
 
-            <div class="mySlides fade">
-                <!-- Project 2 -->
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./Assets/Weather App snap.png" alt="Project 2" class="project-img1">
-                        <h2 class="experience-sub-title project-title">Weather App using API</h2>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/AlexDavis100/Weather-App-2-'">Github</button>
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://weather-forecast-by-uplifttech.netlify.app/'">Live Demo</button>
+    <section id="projects" data-aos="fade-up">
+        <div class="section-header">
+            <span class="section-tag">&lt;projects&gt;</span>
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="projects-container">
+            <div class="project-card" data-aos="fade-up">
+                <div class="project-content">
+                    <h3 class="project-title">Professional Website</h3>
+                    <div class="project-description">
+                        <p>A responsive professional portfolio website showcasing my skills and experience.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
                         </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AlexDavis100" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://alexdavis-professionalprofile.netlify.app" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
-            </div>
-        <div class="mySlides fade">
-        <div class="details-container color-container">
-            <!-- Project 3 -->
-            <div class="article-container">
-                <img src="./Assets/serena jewelries snap 2.png" alt="Project 3" class="project-img1">
-                <h2 class="experience-sub-title project-title">Ecommerce Website</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/AlexDavis100'">Github</button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://serenajewelriesandessentials.netlify.app/'">Live Demo</button>
+                <div class="project-image">
+                    <img src="./Assets/Professional website Project.png" alt="Project 1">
+                    <div class="project-overlay"></div>
                 </div>
             </div>
-        </div>
-        </div>
-        <div class="mySlides fade">
-        <div class="details-container color-container">
-            <!-- Project 4 -->
-            <div class="article-container">
-                <img src="./Assets/upliftteck new snippet.png" alt="Project 4" class="project-img1">
-                <h2 class="experience-sub-title project-title">Company Website</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/AlexDavis100/UpliftTech-Website'">Github</button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://upliftteck.co/'">Live Demo</button>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="mySlides fade">
-            <div class="details-container color-container">
-                <!-- Project 5 -->
-                <div class="article-container">
-                    <img src="./Assets/Django CRM Project.png" alt="Project 4" class="project-img1">
-                    <h2 class="experience-sub-title project-title">Django CRM App </h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/AlexDavis100/Django-CROM'">Github</button>
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='#'">Live Demo</button>
+
+            <div class="project-card reverse" data-aos="fade-up">
+                <div class="project-content">
+                    <h3 class="project-title">Weather App using API</h3>
+                    <div class="project-description">
+                        <p>A real-time weather application that fetches data using weather APIs.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>API</span>
+                        </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AlexDavis100/Weather-App-2-" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://weather-forecast-by-uplifttech.netlify.app/" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
+                <div class="project-image">
+                    <img src="./Assets/Weather App snap.png" alt="Project 2">
+                    <div class="project-overlay"></div>
+                </div>
             </div>
+            
+            <div class="project-card" data-aos="fade-up">
+                <div class="project-content">
+                    <h3 class="project-title">Ecommerce Website</h3>
+                    <div class="project-description">
+                        <p>A fully functional ecommerce website with product listings and checkout functionality.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AlexDavis100" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://serenajewelriesandessentials.netlify.app/" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="./Assets/serena jewelries snap 2.png" alt="Project 3">
+                    <div class="project-overlay"></div>
+                </div>
             </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            <div class="project-card reverse" data-aos="fade-up">
+                <div class="project-content">
+                    <h3 class="project-title">Company Website</h3>
+                    <div class="project-description">
+                        <p>A business website for UpLiftTeck showcasing company services and information.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AlexDavis100/UpliftTech-Website" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://upliftteck.co/" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
         </div>
-
-        
-
-        <img src="./Assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href= './#contact'">
-    </section>
-    <section id="contact">
-        <p class="section__text__p1"> Get In Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img src="./Assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
-                <p class=""><a href="mailto:exampleemail1@gmail.com" class="icon-text-color">davisalex100@gmail.com</a></p>
+        </div>
+                <div class="project-image">
+                    <img src="./Assets/upliftteck new snippet.png" alt="Project 4">
+                    <div class="project-overlay"></div>
+                </div>
             </div>
-            <div class="contact-info-container">
-                <img src="./Assets/linkedin.png" alt="linkedIn icon" class="icon contact-icon">
-                <p class=""><a href="https://www.linkedin.com/in/alex-davis-4095890" class="icon-text-color">LinkedIn</a></p>
+            
+            <div class="project-card" data-aos="fade-up">
+                <div class="project-content">
+                    <h3 class="project-title">Django CRM App</h3>
+                    <div class="project-description">
+                        <p>A customer relationship management application built using Django framework.</p>
+        </div>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+        </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AlexDavis100/Django-CROM" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="./Assets/Django CRM Project.png" alt="Project 5">
+                    <div class="project-overlay"></div>
             </div>
-            <div class="contact-info-container">
-                <img src="./Assets/Phone Icon.png" alt="Email icon" class="icon contact-icon phone-icon">
-                <p class=""> <a href="" class="icon-text-color">876-207-8810</a></p>
             </div>
         </div>
+        <span class="section-tag-end">&lt;/projects&gt;</span>
     </section>
+
+    <section id="contact" data-aos="fade-up">
+        <div class="section-header">
+            <span class="section-tag">&lt;contact&gt;</span>
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="contact-container">
+            <div class="contact-form-container" data-aos="fade-right">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="contact-info" data-aos="fade-left">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <a href="mailto:davisalex100@gmail.com">davisalex100@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/alex-davis-4095890" target="_blank">Alex Davis</a>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Phone</h3>
+                        <a href="tel:8762078810">876-207-8810</a>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Location</h3>
+                        <p>Jamaica</p>
+                    </div>
+            </div>
+            </div>
+        </div>
+        <span class="section-tag-end">&lt;/contact&gt;</span>
+    </section>
+
     <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo">Alex Davis</div>
+                <p>Tech Enthusiast & Professional</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-nav">
+                    <h3>Quick Links</h3>
+                    <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-        </nav>
-        <p>Copy Right &#169; 2023 Alex Davis. All Rights Reserved</p>
+                <div class="footer-socials">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/alex-davis-4095890" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/AlexDavis100" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:davisalex100@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Alex Davis. All Rights Reserved</p>
+        </div>
     </footer>
-<script src="script-LAPTOP-H886CIJJ-2.js"></script>    
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Loading Animation -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
